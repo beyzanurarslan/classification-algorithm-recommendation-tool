@@ -204,7 +204,7 @@ def cli():
     # Parse arguments
     data_name = args.given_data
     target = args.y_column
-    data= pd.read_csv(io.BytesIO(uploaded[data_name]))
+    data= pd.read_csv(data_name)
     X= data.drop(target,axis=1)
     y = data[target]
     df= test_yap(X,y)
